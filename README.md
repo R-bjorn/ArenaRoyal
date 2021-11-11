@@ -1,2 +1,2 @@
-# FirstLevel
- The first level of the game we will build, 
+# Arena Royal
+> is a 3D first-person perspective, multiplayer shooting video game. Fundamentally the game will provide teams, each team containing 2 players at most, in which one team(the “**_Terrorists_**”) battles to perpetrate an act of terror and capture the flag while the other team(the “**_Defenders_**”) try to stop them. Terrorist can trigger the bomb and assassinate the defenders while defenders try to prevent it by defusing the bomb or killing the terrorist in order to save the game world. 

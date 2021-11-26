@@ -7,8 +7,11 @@ public class DetectCollision : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collide");
-        Destroy(gameObject);
-        Destroy(other.gameObject);
+        if (other.tag.Equals("Food"))
+        {
+            Debug.Log("Collide");
+            Destroy(gameObject);
+            Destroy(other.gameObject);   
+        }
     }
 }

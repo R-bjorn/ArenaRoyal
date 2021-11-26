@@ -1,23 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class DestoryObject : MonoBehaviour
+namespace _4._0._0
 {
-    private float topBound = 30;
-    private float lowerBound = -10;
-    // Update is called once per frame
-    void Update()
+    public class DestoryObject : MonoBehaviour
     {
-        if(transform.position.z > topBound)
-            Destroy(gameObject);
-        if (transform.position.z < lowerBound)
+        public float topBound = 30;
+        public float lowerBound = -10;
+        // Update is called once per frame
+        void Update()
         {
-            Debug.Log("Game Over");
-            Destroy(gameObject);
-            // SceneManager.LoadScene("Scene/GameOver");
+            if(transform.position.z > topBound)
+                Destroy(gameObject);
+            if (transform.position.z < lowerBound)
+            {
+                Debug.Log("Game Over");
+                Destroy(gameObject);
+                // SceneManager.LoadScene("Scene/GameOver");
+            }
         }
     }
 }

@@ -1,4 +1,6 @@
 using System;
+using _4._0._0;
+using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -7,6 +9,8 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject[] animalPrefabs;
     // private int animalIndex = 0;
+    public TextMeshProUGUI countT;
+    public GameObject winTextObject;
 
     private float spawnRangeX = 13;
     private float spawnRangeZ = 20;
@@ -17,18 +21,14 @@ public class SpawnManager : MonoBehaviour
     {
         InvokeRepeating("SpawnRandomAnimal", startDelay, spawnInterval);
     }
-
-    // Update is called once per frame
-    void Update()   
-    {
-        // if (Input.GetKeyDown(KeyCode.S))
-        //     SpawnRandomAnimal();
-    }
     
     void SpawnRandomAnimal()
     {
         Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0 , spawnRangeZ);
         int animalIndex = Random.Range(0, animalPrefabs.Length);
-        Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
+        var animal = Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
+        DetectCollision dc = animal.GetComponent<DetectCollision>();
+        dc.countText = countT;
+        dc.winTextObject = winTextObject;
     }
 }

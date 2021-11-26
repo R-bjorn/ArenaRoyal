@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -22,34 +23,43 @@ namespace _4._0._0.UI.Personalize
 
         public void ApplyConcrete()
         {
-            Debug.Log(groundPrefab.sharedMaterial);
+            // Debug.Log(groundPrefab.sharedMaterial);
             ground.sharedMaterial = concrete;
             groundPrefab.sharedMaterial = concrete;
-            Debug.Log(groundPrefab.sharedMaterial);
+            // Debug.Log(groundPrefab.sharedMaterial);
+            Undo.RecordObject(groundPrefab, "change material");
+            // Resources.Load("Prefabs/Ground");
         }
 
         public void ApplyGrass()
         {
-            Debug.Log(groundPrefab.sharedMaterial);
+            // Debug.Log(groundPrefab.sharedMaterial);
             ground.sharedMaterial = grass;
             groundPrefab.sharedMaterial = grass;
-            Debug.Log(groundPrefab.sharedMaterial);
+            // Debug.Log(groundPrefab.sharedMaterial);
+            // Resources.Load("Prefabs/Ground");
+            Undo.RecordObject(groundPrefab, "change material");
         }
+        
 
         public void ApplyGravel()
         {
-            Debug.Log(groundPrefab.sharedMaterial);
+            // Debug.Log(groundPrefab.sharedMaterial);
             ground.sharedMaterial = gravel;
             groundPrefab.sharedMaterial = gravel;
-            Debug.Log(groundPrefab.sharedMaterial);
+            // Debug.Log(groundPrefab.sharedMaterial);
+            // Resources.Load("Prefabs/Ground");
+            Undo.RecordObject(groundPrefab, "change material");
         }
 
         public void ApplySand()
         {
-            Debug.Log(groundPrefab.sharedMaterial);
+            // Debug.Log(groundPrefab.sharedMaterial);
             ground.sharedMaterial = sand;
             groundPrefab.sharedMaterial = sand;
-            Debug.Log(groundPrefab.sharedMaterial);
+            // Debug.Log(groundPrefab.sharedMaterial);
+            // Resources.Load("Prefabs/Ground");
+            Undo.RecordObject(groundPrefab, "change material");
         }
 
         public void Back()

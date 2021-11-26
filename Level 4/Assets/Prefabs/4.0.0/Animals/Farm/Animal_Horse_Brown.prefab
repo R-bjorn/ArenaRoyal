@@ -1478,6 +1478,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d029409495c6f2d44b689d595c8cd1af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  topBound: 30
+  lowerBound: -10
 --- !u!65 &2075934702473277521
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1503,6 +1505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fe443ceae57ec24fa03026bb25d5a4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  countText: {fileID: 7462965663551479888, guid: 77376ecb583fc404bb04f38307716604, type: 3}
 --- !u!54 &-6118466235363087261
 Rigidbody:
   m_ObjectHideFlags: 0

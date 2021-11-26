@@ -1,54 +1,70 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
-public class Personalize : MonoBehaviour
+namespace _4._0._0.UI.Personalize
 {
-
-    public Renderer groundPrefab;
-    public Renderer ground;
-    public Material concrete;
-    public Material grass;
-    public Material gravel;
-    public Material sand;
-
-    // public Material currentMaterial;
-
-    // private void Start()
-    // {
-    //     currentMaterial = ground.GetComponent<Material>();
-    // }
-
-    public void ApplyConcrete()
+    public class Personalize : MonoBehaviour
     {
-        ground.sharedMaterial = concrete;
-        groundPrefab.sharedMaterial = concrete;
-    }
 
-    public void ApplyGrass()
-    {
-        ground.sharedMaterial = grass;
-        groundPrefab.sharedMaterial = grass;
-    }
+        public Renderer groundPrefab;
+        public Renderer ground;
+        public Material concrete;
+        public Material grass;
+        public Material gravel;
+        public Material sand;
 
-    public void ApplyGravel()
-    {
-        ground.sharedMaterial = gravel;
-        groundPrefab.sharedMaterial = gravel;
-    }
+        // public Material currentMaterial;
 
-    public void ApplySand()
-    {
-        ground.sharedMaterial = sand;
-        groundPrefab.sharedMaterial = sand;
-    }
+        // private void Start()
+        // {
+        //     currentMaterial = ground.GetComponent<Material>();
+        // }
 
-    public void Back()
-    {
-        Debug.Log("Back");
-        SceneManager.LoadScene("Scenes/Menu");
+        public void ApplyConcrete()
+        {
+            // Debug.Log(groundPrefab.sharedMaterial);
+            ground.sharedMaterial = concrete;
+            groundPrefab.sharedMaterial = concrete;
+            // Debug.Log(groundPrefab.sharedMaterial);
+            Undo.RecordObject(groundPrefab, "change material");
+            // Resources.Load("Prefabs/Ground");
+        }
+
+        public void ApplyGrass()
+        {
+            // Debug.Log(groundPrefab.sharedMaterial);
+            ground.sharedMaterial = grass;
+            groundPrefab.sharedMaterial = grass;
+            // Debug.Log(groundPrefab.sharedMaterial);
+            // Resources.Load("Prefabs/Ground");
+            Undo.RecordObject(groundPrefab, "change material");
+        }
+        
+
+        public void ApplyGravel()
+        {
+            // Debug.Log(groundPrefab.sharedMaterial);
+            ground.sharedMaterial = gravel;
+            groundPrefab.sharedMaterial = gravel;
+            // Debug.Log(groundPrefab.sharedMaterial);
+            // Resources.Load("Prefabs/Ground");
+            Undo.RecordObject(groundPrefab, "change material");
+        }
+
+        public void ApplySand()
+        {
+            // Debug.Log(groundPrefab.sharedMaterial);
+            ground.sharedMaterial = sand;
+            groundPrefab.sharedMaterial = sand;
+            // Debug.Log(groundPrefab.sharedMaterial);
+            // Resources.Load("Prefabs/Ground");
+            Undo.RecordObject(groundPrefab, "change material");
+        }
+
+        public void Back()
+        {
+            SceneManager.LoadScene("Scenes/Menu");
+        }
     }
 }

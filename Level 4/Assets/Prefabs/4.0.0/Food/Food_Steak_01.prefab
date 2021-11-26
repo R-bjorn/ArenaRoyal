@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -7794486224339019027}
   m_Layer: 0
   m_Name: Food_Steak_01
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,6 +109,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d029409495c6f2d44b689d595c8cd1af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  topBound: 30
+  lowerBound: -10
 --- !u!65 &-7794486224339019027
 BoxCollider:
   m_ObjectHideFlags: 0

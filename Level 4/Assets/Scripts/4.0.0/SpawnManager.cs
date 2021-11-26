@@ -8,7 +8,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] animalPrefabs;
     // private int animalIndex = 0;
 
-    private float spawnRangeX = 15;
+    private float spawnRangeX = 13;
     private float spawnRangeZ = 20;
 
     private float startDelay = 2;
@@ -21,8 +21,8 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()   
     {
-        if (Input.GetKeyDown(KeyCode.S))
-            SpawnRandomAnimal();
+        // if (Input.GetKeyDown(KeyCode.S))
+        //     SpawnRandomAnimal();
     }
     
     void SpawnRandomAnimal()
